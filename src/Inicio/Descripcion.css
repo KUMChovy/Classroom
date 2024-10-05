@@ -38,19 +38,19 @@ body{
   
   #descripcion {
     display: flex;
-    flex-direction: column; /* Alinear el contenido en columna */
-    justify-content: center; /* Centrar verticalmente */
-    align-items: center; /* Centrar horizontalmente */
-    height: 100%; /* Ocupa el 100% del height */
-    color: white; /* Color de texto para mejor legibilidad */
-    text-align: center; /* Centrar texto */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    color: white; 
+    text-align: center;
   }
   
   .text-justify {
-    text-align: center; /* Asegúrate de que el texto esté centrado */
+    text-align: center; 
   }
 #Comentarios{
-    margin: 5% 10% 50% 10%;
+    margin: 5% 10% 5% 10%;
 }
 
 #popover-basic{
@@ -59,7 +59,3 @@ body{
 .text{
     color: white;
 }
-
-section {
-    
-  }
