@@ -17,3 +17,7 @@ instala todas las extenciones o componentes que no tengas
     npm install react-bootstrap bootstrap
 
     npm install react-bootstrap@latest bootstrap@latest
+
+ git config pull.rebase false  # fusionar
+hint:   git config pull.rebase true   # rebasar
+hint:   git config pull.ff only       # solo avance rápido
