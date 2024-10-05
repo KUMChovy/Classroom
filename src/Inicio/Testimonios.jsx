@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import './Testimonios'
+import Button from 'react-bootstrap/Button';
 
 const comments = [
   {
@@ -30,16 +31,22 @@ const Testimonio = () => {
               src={comment.img}
               alt={comment.name}
               className="rounded-circle me-3"
-              style={{ width: '50px', height: '50px', margin: '0% 0% 0% 10%' }}
+              style={{ width: '0px', height: '50px', margin: '0% 0% 0% 10%' }}
             />
-            <div className='Contenido'>
+            <div className='Contenido' style={{ color: '#b3b6b7 ' }}>
               <h5>{comment.name}</h5>
               <p>{comment.text}</p>
             </div>
+
+            
           </div>
         </Carousel.Item>
       ))}
+
+      
     </Carousel>
+    
+    
   );
 };
 

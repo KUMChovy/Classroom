@@ -4,7 +4,7 @@ import './Descripcion.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Testimonio from './Testimonios';
 import Nav from '../Componentes/Nav'
-
+import Acerca from './Acerca'
 
 const Inicio = () => {
   const [showMore, setShowMore] = useState(false);
@@ -22,7 +22,7 @@ const Inicio = () => {
     
     <Container className="text-start" style={{ maxWidth: '95%', margin: 'auto', marginTop: '0' }}>
       <br></br> 
-      <h1 className="text-primary">Seguridad en Aulas</h1>
+      <h1 className="text-primary">Classroom security</h1>
       <p className="text-justify">
         Este sitio web automatiza el control de ventiladores y proyectores en las aulas.
       </p>
@@ -52,8 +52,17 @@ const Inicio = () => {
 
       <section id='Comentarios'>
           <Testimonio />
-
       </section>
+
+
+
+
+      <section id='Acerca-de'>
+          <Acerca />
+      </section>
+
+
+
     </body>
   );
 };
