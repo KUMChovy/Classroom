@@ -29,7 +29,7 @@ const Inicio = () => {
 
       <OverlayTrigger
         trigger="hover"
-        placement="left"
+        placement="right"
         overlay={
           <Popover id="popover-basic">
             <Popover.Header as="h3">Más Info</Popover.Header>
