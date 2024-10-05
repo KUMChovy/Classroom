@@ -15,3 +15,5 @@ instala todas las extenciones o componentes que no tengas
 
 
     npm install react-bootstrap bootstrap
+
+    npm install react-bootstrap@latest bootstrap@latest

@@ -1,0 +1,10 @@
+.custom-carousel {
+    max-width: 800px; /* Ancho máximo deseado */
+    margin: auto; /* Centrar el carrusel */
+  }
+  
+  .custom-carousel img {
+    height: auto; /* Mantener la relación de aspecto */
+    max-height: 400px; /* Altura máxima deseada */
+  }
+  

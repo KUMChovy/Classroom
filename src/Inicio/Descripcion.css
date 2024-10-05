@@ -1,0 +1,65 @@
+*
+body{
+    background-color: black;
+}
+.text-justify {
+    text-align: justify; 
+    margin: 5% 0% 0% 50%;
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+.no2 {
+    text-align: justify; 
+    margin: 0% 0% 0% 50%;
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+.outline-light{
+    margin: 0% 0% 0% 50%;
+
+}
+.text-primary{
+    text-align: justify; 
+    margin: 0% 0% 0% 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue !important;
+    
+}
+
+.fondo {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjdNH5QKhPqRC-FmfTX7yNqKmlpeKpBZZ87A&s');
+    margin: 10px; 
+    padding: 0; 
+    height: 40vh; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+  
+  #descripcion {
+    display: flex;
+    flex-direction: column; /* Alinear el contenido en columna */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    height: 100%; /* Ocupa el 100% del height */
+    color: white; /* Color de texto para mejor legibilidad */
+    text-align: center; /* Centrar texto */
+  }
+  
+  .text-justify {
+    text-align: center; /* Asegúrate de que el texto esté centrado */
+  }
+#Comentarios{
+    margin: 5% 10% 50% 10%;
+}
+
+#popover-basic{
+    background-color: black;
+}
+.text{
+    color: white;
+}
+
+section {
+    
+  }
