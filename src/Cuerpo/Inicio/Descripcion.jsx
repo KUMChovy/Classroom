@@ -10,7 +10,7 @@ export default function Inicio(){
     return (
         <Container>
             <h1>
-                Classroom Security 1 <Badge bg="secondary">New</Badge>
+                Classroom Security yo estuve aqui <Badge bg="secondary">New</Badge>
             </h1>
         </Container>
     );
