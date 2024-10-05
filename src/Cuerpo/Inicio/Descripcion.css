@@ -1,0 +1,42 @@
+*
+body{
+    background-color: black;
+}
+.text-justify {
+    text-align: justify; 
+    margin: 5% 50% 0% 0%;
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+.no2 {
+    text-align: justify; 
+    margin: 0% 50% 0% 0%;
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+}
+.text-primary{
+    text-align: justify; 
+    margin: 15% 50% 0% 0%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue !important;
+}
+.fondo{
+    background-image: url('https://media.istockphoto.com/id/2054409282/es/foto/imagen-de-fondo-de-la-tecnolog%C3%ADa-del-chip-de-procesamiento-de-datos-de-la-red-de-la-placa-de.jpg?s=612x612&w=0&k=20&c=pm6FoB5-bI4p9__V-SJsoKHVrG_HsRpovfmDsDC3mTk=');
+
+        margin: 20px;
+        padding: 0;
+        height: 80vh;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; 
+  
+
+}
+.Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegúrate de que el contenido ocupe el 100% del height */
+    color: white; /* Color de texto para mejor legibilidad */
+}

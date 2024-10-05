@@ -4,6 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../Componentes/Nav.css';
+import { Link } from 'react-router-dom';
+
 
 
 export default function Navegador(){
@@ -25,13 +27,28 @@ export default function Navegador(){
     </Navbar.Toggle>
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto mx-auto space-x-4"> {/* mx-auto para centrar */}
-        <Nav.Link Link to = "Inicio" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">Inicio</Nav.Link>
+        <Nav.Link as={Link} to = "/Inicio" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">Inicio</Nav.Link>
         <Nav.Link href="#link" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">Productos y servicios</Nav.Link>
         <Nav.Link href="#link" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">Acerca de</Nav.Link>
-        <NavDropdown title="Más" id="basic-nav-dropdown" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">
-          <NavDropdown.Item href="#action/3.1" className="hover:bg-blue-100 transition duration-200 font-bold">Contacto</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2" className="hover:bg-blue-100 transition duration-200 font-bold">Comentarios</NavDropdown.Item>
-        </NavDropdown>
+        <NavDropdown 
+  title={<span className="text-white">Más</span>} // Cambiar "Más" a blanco
+  id="basic-nav-dropdown" 
+  className="font-bold"
+  menuVariant="dark" // Aplica un fondo oscuro al desplegable
+>
+  <NavDropdown.Item 
+    href="#action/3.1" 
+    className="hover:bg-gray-700 transition duration-200 font-bold text-white" // Fondo gris oscuro y texto blanco
+  >
+    Contacto
+  </NavDropdown.Item>
+  <NavDropdown.Item 
+    href="#action/3.2" 
+    className="hover:bg-gray-700 transition duration-200 font-bold text-white" // Fondo gris oscuro y texto blanco
+  >
+    Comentarios
+  </NavDropdown.Item>
+</NavDropdown>
       </Nav>
       <Nav.Link href="#link" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">Iniciar sesión</Nav.Link> {/* Alineación a la derecha */}
     </Navbar.Collapse>
