@@ -1,3 +1,17 @@
-npx create-react-app iot   
+crea un proyecto en react
+    npx create-react-app iot   
 
-npm install react-router-dom
+instala la extencion de router que sirve para enrutar 
+    npm install react-router-dom
+
+actualiza los cambios en tu vs que hagan los demas desarrolladores
+    git pull
+
+compila el proyecto no importa donde estes 
+    npm star
+
+instala todas las extenciones o componentes que no tengas 
+    npm install
+
+
+    npm install react-bootstrap bootstrap
