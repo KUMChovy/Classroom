@@ -19,9 +19,10 @@ function Busqueda() {
         },
         {
             id: 2,
-            nombre: 'Sensor humedad YL-69',
+            nombre: 'Sensor De Temperatura Y Humedad DHT22',
             categoria: 'Ambiental',
             descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos incidunt tenetur, ut voluptas, autem expedita porro vitae vel facere perferendis ipsum maxime quaerat tempore voluptate illum dolorem cupiditate. Veritatis, repudiandae.',
+            img: 'https://http2.mlstatic.com/D_NQ_NP_2X_683016-MLM32008041177_082019-F.webp',
         },
         {
             id: 3,
