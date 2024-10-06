@@ -4,6 +4,7 @@ import Islas from '../img/Islas.jpeg';
 import Choby from '../img/Choby.jpeg'; 
 import Jose from '../img/Jose.jpeg';
 import Enrique from '../img/Enrique.jpeg';
+import Yan from '../img/Yan.jpeg';
 import './Acerca.css';
 
 const registros = [
@@ -41,7 +42,7 @@ const registros = [
     id: 6,
     name: 'Lopez Alcantara Yaneth Berenice',
     title: 'Tester',
-    img: 'https://via.placeholder.com/150',
+    img: Yan,
   },
 ];
 

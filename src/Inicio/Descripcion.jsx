@@ -8,7 +8,7 @@ import Acerca from './Acerca'
 import Busqueda from './Productos';
 import Hvm from '../Inicio/Hvm';
 import Valores from './Valores';
-
+import Footer from '../Componentes/Footer';
 
 const Inicio = () => {
   const [showMore, setShowMore] = useState(false);
@@ -21,6 +21,9 @@ const Inicio = () => {
   
     <body>
       <Nav />
+
+
+
       <section id="Descripcion">
   <div className='fondo'>
     
@@ -52,14 +55,15 @@ const Inicio = () => {
   </div>
 </section>
 
-        <section id='busqueda'>
-          <Busqueda />
-        </section>
+        
 
       <section id='Comentarios'>
           <Testimonio />
       </section>
 
+      <section id='Busqueda'>
+          <Busqueda />
+        </section>
 
       <section id='Acerca-de'>
           <Hvm />
@@ -77,6 +81,8 @@ const Inicio = () => {
       </section>
 
 
+
+      <Footer />
     </body>
   );
 };

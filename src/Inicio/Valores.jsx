@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Container } from 'react-bootstrap';
+import { Card, Container, Carousel } from 'react-bootstrap';
 import './Valores.css';
 
 const valores = [
@@ -41,23 +41,44 @@ const Valores = () => {
   return (
     <Container className="valores-nueva-container">
       <h2 className="titulo-valores">Valores de la Empresa</h2>
-      <div className="valores-nueva-row">
-        {valores.map((valor) => (
-          <Card
-            key={valor.id}
-            className={`tarjeta-personalizada ${focusedCard === valor.id ? 'focused' : ''}`}
-            onMouseEnter={() => setFocusedCard(valor.id)}
-            onMouseLeave={() => setFocusedCard(null)}
-            style={{ width: '18rem' }}
-          >
-            <Card.Img variant="top" src={valor.img} />
-            <Card.Body>
-              <Card.Title className="titulo-tarjeta">{valor.title}</Card.Title>
-              <Card.Text className="texto-tarjeta">{valor.description}</Card.Text>
-            </Card.Body>
-          </Card>
-        ))}
-      </div>
+      <Carousel>
+        <Carousel.Item>
+          <div className="valores-nueva-row">
+            {valores.slice(0, 3).map((valor) => (
+              <Card
+                key={valor.id}
+                className={`tarjeta-personalizada ${focusedCard === valor.id ? 'focused' : ''}`}
+                onMouseEnter={() => setFocusedCard(valor.id)}
+                onMouseLeave={() => setFocusedCard(null)}
+                style={{ width: '18rem', display: 'inline-block' }}
+              >
+                <Card.Img variant="top" src={valor.img} />
+                <Card.Body>
+                  <Card.Title className="titulo-tarjeta">{valor.title}</Card.Title>
+                </Card.Body>
+              </Card>
+            ))}
+          </div>
+        </Carousel.Item>
+        <Carousel.Item>
+          <div className="valores-nueva-row">
+            {valores.slice(3).map((valor) => (
+              <Card
+                key={valor.id}
+                className={`tarjeta-personalizada ${focusedCard === valor.id ? 'focused' : ''}`}
+                onMouseEnter={() => setFocusedCard(valor.id)}
+                onMouseLeave={() => setFocusedCard(null)}
+                style={{ width: '18rem', display: 'inline-block' }}
+              >
+                <Card.Img variant="top" src={valor.img} />
+                <Card.Body>
+                  <Card.Title className="titulo-tarjeta">{valor.title}</Card.Title>
+                </Card.Body>
+              </Card>
+            ))}
+          </div>
+        </Carousel.Item>
+      </Carousel>
     </Container>
   );
 };

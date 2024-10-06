@@ -6,7 +6,7 @@
     height: 400px;
     object-fit: cover;
     filter: brightness(0.7);
-    transition: transform 0.7s; /* Aumenté el tiempo de transición a 0.7s */
+    transition: transform 0.7s; 
   }
   
   .carousel-content img:hover {
