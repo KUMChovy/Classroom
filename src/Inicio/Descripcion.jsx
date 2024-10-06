@@ -5,8 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Testimonio from './Testimonios';
 import Nav from '../Componentes/Nav'
 import Acerca from './Acerca'
+import Busqueda from './Productos';
 import Hvm from '../Inicio/Hvm';
 import Valores from './Valores';
+
 
 const Inicio = () => {
   const [showMore, setShowMore] = useState(false);
@@ -16,7 +18,7 @@ const Inicio = () => {
   };
 
   return (
-    
+  
     <body>
       <Nav />
       <section id="Descripcion">
@@ -50,7 +52,9 @@ const Inicio = () => {
   </div>
 </section>
 
-
+        <section id='busqueda'>
+          <Busqueda />
+        </section>
 
       <section id='Comentarios'>
           <Testimonio />
@@ -66,9 +70,12 @@ const Inicio = () => {
           <Acerca />
       </section>
 
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <section id='Acerca-de'>
           <Valores />
       </section>
+
 
     </body>
   );

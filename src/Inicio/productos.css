@@ -1,0 +1,19 @@
+.caja {
+    width: 300px; 
+    transition: all 0.3s ease; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 5px 10px;
+    
+}
+
+.caja:focus {
+    background-color: rgba(0, 0, 0, 0.9); 
+    outline: none;
+    color: #fff; 
+}
+
+.caja::placeholder {
+    color: rgb(255, 255, 255); 
+}
