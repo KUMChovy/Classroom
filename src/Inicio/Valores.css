@@ -1,14 +1,14 @@
 .valores-nueva-container {
     margin-top: 10px;
     position: relative;
-    height: 0%;
-    margin: 0% auto 5%; /* Margen superior 0%, inferior 30%, automático a los lados */
-
+    height: auto; 
+    margin: 0 auto 5%;
 }
 
 .valores-nueva-row {
-    position: relative;
-    height: 250px;
+    display: flex; 
+    justify-content: center; 
+    margin: 20px 0; 
 }
 
 .tarjeta-personalizada {
@@ -17,34 +17,6 @@
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    position: absolute;
-    width: 250px;
-    height: 250px;
-
-}
-
-.tarjeta-personalizada:nth-child(1) {
-    left: 0%;
-}
-
-.tarjeta-personalizada:nth-child(2) {
-    left: 15%;
-}
-
-.tarjeta-personalizada:nth-child(3) {
-    left: 30%;
-}
-
-.tarjeta-personalizada:nth-child(4) {
-    left: 45%;
-}
-
-.tarjeta-personalizada:nth-child(5) {
-    left: 60%;
-}
-
-.tarjeta-personalizada:nth-child(6) {
-    left: 75%;
 }
 
 .tarjeta-personalizada:hover {
@@ -62,16 +34,12 @@
     font-size: 1.2rem;
 }
 
-.texto-tarjeta {
-    font-size: 0.9rem;
-}
-
 .titulo-valores {
     text-align: center;
     font-size: 4rem;
     background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 0% auto 5%; /* Margen superior 0%, inferior 30%, automático a los lados */
+    margin: 0 auto 5%; /* Margen superior 0%, inferior 30%, automático a los lados */
     width: fit-content;
 }

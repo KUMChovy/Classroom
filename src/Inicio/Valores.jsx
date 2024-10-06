@@ -50,7 +50,7 @@ const Valores = () => {
                 className={`tarjeta-personalizada ${focusedCard === valor.id ? 'focused' : ''}`}
                 onMouseEnter={() => setFocusedCard(valor.id)}
                 onMouseLeave={() => setFocusedCard(null)}
-                style={{ width: '18rem', display: 'inline-block' }}
+                style={{ width: '18rem', margin: '0 15px' }} // Agregado margen horizontal
               >
                 <Card.Img variant="top" src={valor.img} />
                 <Card.Body>
@@ -68,7 +68,7 @@ const Valores = () => {
                 className={`tarjeta-personalizada ${focusedCard === valor.id ? 'focused' : ''}`}
                 onMouseEnter={() => setFocusedCard(valor.id)}
                 onMouseLeave={() => setFocusedCard(null)}
-                style={{ width: '18rem', display: 'inline-block' }}
+                style={{ width: '18rem', margin: '0 15px' }} // Agregado margen horizontal
               >
                 <Card.Img variant="top" src={valor.img} />
                 <Card.Body>
