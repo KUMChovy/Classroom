@@ -1,0 +1,37 @@
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #000000;
+  }
+  
+  .valor-item {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Alinea verticalmente el contenido */
+  }
+  
+  .valor-item.image {
+    justify-content: center;
+  }
+  
+  .valor-item.text {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: justify; /* Justifica el texto */
+  }
+  
+  .transparent-image {
+    width: 100px;
+    height: 100px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .transparent-image:hover {
+    opacity: 1;
+  }
+  

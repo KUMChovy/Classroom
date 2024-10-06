@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Testimonio from './Testimonios';
 import Nav from '../Componentes/Nav'
 import Acerca from './Acerca'
+import Hvm from '../Inicio/Hvm';
+import Valores from './Valores';
 
 const Inicio = () => {
   const [showMore, setShowMore] = useState(false);
@@ -55,13 +57,18 @@ const Inicio = () => {
       </section>
 
 
+      <section id='Acerca-de'>
+          <Hvm />
+      </section>
 
 
       <section id='Acerca-de'>
           <Acerca />
       </section>
 
-
+      <section id='Acerca-de'>
+          <Valores />
+      </section>
 
     </body>
   );

@@ -1,9 +1,11 @@
 import React from 'react';
-import { Card, Row, Col } from 'react-bootstrap'; 
+import { Card } from 'react-bootstrap'; 
 import Islas from '../img/Islas.jpeg'; 
 import Choby from '../img/Choby.jpeg'; 
 import Jose from '../img/Jose.jpeg';
-import './Acerca.css'
+import './Acerca.css';
+
+
 
 const registros = [
   {
@@ -44,23 +46,29 @@ const registros = [
   },
 ];
 
+// Componente para mostrar los registros
 function Otros() {
   return (
-    <div className="d-flex justify-content-center flex-wrap">
-      {registros.map((registro) => (
-        <Card key={registro.id} className="m-3 custom-card" style={{ width: '10rem', position: 'relative' }}>
-          <Card.Img variant="top" src={registro.img} className="img" />
-          <div className="details">
-            <Card.Body>
-              <Card.Title>{registro.name}</Card.Title>
-              <Card.Text>
-                {registro.title}
-              </Card.Text>
-            </Card.Body>
-          </div>
-        </Card>
-      ))}
-    </div>
+    <>
+    
+      <section className="mt-4"> {/* Margen superior para esta sección */}
+        <div className="d-flex justify-content-center flex-wrap">
+          {registros.map((registro) => (
+            <Card key={registro.id} className="m-3 custom-card" style={{ width: '10rem', position: 'relative' }}>
+              <Card.Img variant="top" src={registro.img} className="img" />
+              <div className="details">
+                <Card.Body>
+                  <Card.Title>{registro.name}</Card.Title>
+                  <Card.Text>
+                    {registro.title}
+                  </Card.Text>
+                </Card.Body>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
 
