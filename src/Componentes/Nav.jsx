@@ -27,8 +27,8 @@ export default function Navegador(){
     </Navbar.Toggle>
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto mx-auto space-x-4"> 
-        <Nav.Link as={Link} to = "/" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">Inicio</Nav.Link>
-        <Nav.Link as={Link} to="/Productos-servicios" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">Productos y servicios</Nav.Link>
+        <Nav.Link as={Link} to = "/Inicio" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">Inicio</Nav.Link>
+        <Nav.Link href="#link" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">Productos y servicios</Nav.Link>
         <Nav.Link href="#link" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">Acerca de</Nav.Link>
         <NavDropdown 
   title={<span className="text-white">Más</span>} 

@@ -4,20 +4,20 @@
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .custom-card:hover {
+    position: relative; /* Necesario para que los elementos absolutos funcionen */
+}
+
+.custom-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .img {
+}
+
+.img {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-  }
-  
-  .details {
-    display: none;
+}
+
+.details {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -25,18 +25,15 @@
     background: linear-gradient(135deg, #4a235a, #000080);
     color: white;
     padding: 10px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Cambiamos a visibility */
     opacity: 0;
+    visibility: hidden; /* Oculto inicialmente */
     transform: translateY(20px);
-  }
-  
-  .custom-card:hover .details {
-    display: block;
+}
+
+.custom-card:hover .details {
     opacity: 1;
+    visibility: visible; /* Muestra cuando está en hover */
     transform: translateY(0);
-  }
-  
-  .card {
-    margin: 20px;
-  }
-  
+}
+

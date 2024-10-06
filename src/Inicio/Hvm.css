@@ -1,0 +1,62 @@
+.carousel-content {
+    position: relative;
+  }
+  
+  .carousel-content img {
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: transform 0.7s; /* Aumenté el tiempo de transición a 0.7s */
+  }
+  
+  .carousel-content img:hover {
+    transform: scale(1.05);
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: transparent;
+    background: linear-gradient(to right, #000080, #4a235a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 2rem;
+    color: transparent;
+    background: linear-gradient(to right, #000080, #4a235a);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .content {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    transition: opacity 1s ease-in-out; /* Aumenté el tiempo de transición a 1s */
+  }
+  
+  .fade-in {
+    animation: fadeIn 1.5s ease forwards; /* Aumenté el tiempo de animación a 1.5s */
+  }
+  
+  .fade-in.delay {
+    animation-delay: 1s; /* Aumenté el retardo a 1s */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
