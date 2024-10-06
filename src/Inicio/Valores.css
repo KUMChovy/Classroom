@@ -1,33 +1,77 @@
-.valores-grid {
-    padding: 20px;
-  }
-  
-  .valores-item {
-    margin-bottom: 20px;
-  }
-  
-  .valores-card {
-    background-image: url('https://www.istockphoto.com/vector/innovatiove-solution-concepts-on-white-background-gm1531567283-525207227?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_illustration_sponsored&utm_content=https%3A%2F%2Fpixabay.com%2Fes%2Fillustrations%2Fsearch%2Finovacion%2F&utm_term=inovacion'); /* Cambia esto por la ruta de tu imagen */
-    background-size: cover; /* Ajusta la imagen al tamaño del card */
-    background-position: center; /* Centra la imagen */
-    color: #ffffff; /* Texto en blanco */
-    position: relative; /* Para el posicionamiento del pseudo-elemento */
-    overflow: hidden; /* Para ocultar el pseudo-elemento fuera del card */
-  }
-  
-  .valores-card::before {
-    content: ''; /* Crea un pseudo-elemento */
-    position: absolute; /* Posicionamiento absoluto */
-    top: 0; /* Alinea a la parte superior */
-    left: 0; /* Alinea a la izquierda */
-    right: 0; /* Alinea a la derecha */
-    bottom: 0; /* Alinea a la parte inferior */
-    background: rgba(0, 0, 0, 0.5); /* Sombreado negro con opacidad */
-    z-index: 1; /* Coloca el sombreado detrás del contenido */
-  }
-  
-  .card-body {
-    position: relative; /* Para asegurar que el contenido esté sobre el sombreado */
-    z-index: 2; /* Coloca el contenido encima del sombreado */
-  }
-  
+.valores-nueva-container {
+    margin-top: 10px;
+    position: relative;
+    height: 0%;
+    margin: 0% auto 30%; /* Margen superior 0%, inferior 30%, automático a los lados */
+
+}
+
+.valores-nueva-row {
+    position: relative;
+    height: 250px;
+}
+
+.tarjeta-personalizada {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+
+}
+
+.tarjeta-personalizada:nth-child(1) {
+    left: 0%;
+}
+
+.tarjeta-personalizada:nth-child(2) {
+    left: 15%;
+}
+
+.tarjeta-personalizada:nth-child(3) {
+    left: 30%;
+}
+
+.tarjeta-personalizada:nth-child(4) {
+    left: 45%;
+}
+
+.tarjeta-personalizada:nth-child(5) {
+    left: 60%;
+}
+
+.tarjeta-personalizada:nth-child(6) {
+    left: 75%;
+}
+
+.tarjeta-personalizada:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.tarjeta-personalizada img {
+    transition: transform 0.3s ease;
+    height: 200px;
+    object-fit: cover;
+}
+
+.titulo-tarjeta {
+    font-size: 1.2rem;
+}
+
+.texto-tarjeta {
+    font-size: 0.9rem;
+}
+
+.titulo-valores {
+    text-align: center;
+    font-size: 4rem;
+    background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0% auto 5%; /* Margen superior 0%, inferior 30%, automático a los lados */
+    width: fit-content;
+}

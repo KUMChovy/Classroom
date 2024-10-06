@@ -3,9 +3,8 @@ import { Card } from 'react-bootstrap';
 import Islas from '../img/Islas.jpeg'; 
 import Choby from '../img/Choby.jpeg'; 
 import Jose from '../img/Jose.jpeg';
+import Enrique from '../img/Enrique.jpeg';
 import './Acerca.css';
-
-
 
 const registros = [
   {
@@ -18,7 +17,7 @@ const registros = [
     id: 2,
     name: 'Guzman Sanchez Luiz Enrique',
     title: 'Analista en Base de datos',
-    img: 'https://via.placeholder.com/150', 
+    img: Enrique, 
   },
   {
     id: 3,
@@ -50,8 +49,7 @@ const registros = [
 function Otros() {
   return (
     <>
-    
-      <section className="mt-4"> {/* Margen superior para esta sección */}
+      <section className="mt-4 section-bottom-margin"> {/* Margen inferior del 30% */}
         <div className="d-flex justify-content-center flex-wrap">
           {registros.map((registro) => (
             <Card key={registro.id} className="m-3 custom-card" style={{ width: '10rem', position: 'relative' }}>

@@ -66,13 +66,13 @@ const Inicio = () => {
       </section>
 
 
-      <section id='Acerca-de'>
+      <section id='Acerca'>
           <Acerca />
       </section>
 
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <section id='Acerca-de'>
+      <section id='Acerc'>
           <Valores />
       </section>
 
