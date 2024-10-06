@@ -1,37 +1,33 @@
 .valores-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
     padding: 20px;
-    background-color: #000000;
   }
   
-  .valor-item {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Alinea verticalmente el contenido */
+  .valores-item {
+    margin-bottom: 20px;
   }
   
-  .valor-item.image {
-    justify-content: center;
+  .valores-card {
+    background-image: url('https://www.istockphoto.com/vector/innovatiove-solution-concepts-on-white-background-gm1531567283-525207227?utm_source=pixabay&utm_medium=affiliate&utm_campaign=SRP_illustration_sponsored&utm_content=https%3A%2F%2Fpixabay.com%2Fes%2Fillustrations%2Fsearch%2Finovacion%2F&utm_term=inovacion'); /* Cambia esto por la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen al tamaño del card */
+    background-position: center; /* Centra la imagen */
+    color: #ffffff; /* Texto en blanco */
+    position: relative; /* Para el posicionamiento del pseudo-elemento */
+    overflow: hidden; /* Para ocultar el pseudo-elemento fuera del card */
   }
   
-  .valor-item.text {
-    font-size: 1.2rem;
-    color: #ffffff;
-    text-align: justify; /* Justifica el texto */
+  .valores-card::before {
+    content: ''; /* Crea un pseudo-elemento */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Alinea a la parte superior */
+    left: 0; /* Alinea a la izquierda */
+    right: 0; /* Alinea a la derecha */
+    bottom: 0; /* Alinea a la parte inferior */
+    background: rgba(0, 0, 0, 0.5); /* Sombreado negro con opacidad */
+    z-index: 1; /* Coloca el sombreado detrás del contenido */
   }
   
-  .transparent-image {
-    width: 100px;
-    height: 100px;
-    opacity: 0.7;
-    transition: opacity 0.3s ease;
-  }
-  
-  .transparent-image:hover {
-    opacity: 1;
+  .card-body {
+    position: relative; /* Para asegurar que el contenido esté sobre el sombreado */
+    z-index: 2; /* Coloca el contenido encima del sombreado */
   }
   

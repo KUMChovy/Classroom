@@ -1,64 +1,74 @@
+import React from 'react';
+import { Row, Col, Card } from 'react-bootstrap';
 import './Valores.css';
 
 function Valores() {
   return (
-    <div className="valores-grid">
-      <div className="valor-item image">
-        <img src="ruta_imagen_innovacion.png" alt="Innovación" className="transparent-image" />
-      </div>
-      <div className="valor-item text">
-        Innovación: Crear soluciones creativas que mejoren la educación y automatización en aulas.
-      </div>
+    <Row className="valores-grid">
+      <Col xs={12} md={6} lg={3} className="valores-item">
+        <Card className="text-center valores-card">
+          <Card.Body>
+            <Card.Title>Innovación</Card.Title>
+          </Card.Body>
+        </Card>
+      </Col>
       
-      <div className="valor-item image">
-        <img src="ruta_imagen_colaboracion.png" alt="Colaboración" className="transparent-image" />
-      </div>
-      <div className="valor-item text">
-        Colaboración: Fomentar el trabajo en equipo entre desarrolladores y educadores.
-      </div>
+      <Col xs={12} md={6} lg={3} className="valores-item">
+        <Card className="text-center valores-card">
+          <Card.Body>
+            <Card.Title>Colaboración</Card.Title>
+          </Card.Body>
+        </Card>
+      </Col>
       
-      <div className="valor-item image">
-        <img src="ruta_imagen_calidad.png" alt="Calidad" className="transparent-image" />
-      </div>
-      <div className="valor-item text">
-        Calidad: Excelencia en el diseño y funcionalidad de soluciones tecnológicas.
-      </div>
+      <Col xs={12} md={6} lg={3} className="valores-item">
+        <Card className="text-center valores-card">
+          <Card.Body>
+            <Card.Title>Calidad</Card.Title>
+          </Card.Body>
+        </Card>
+      </Col>
       
-      <div className="valor-item image">
-        <img src="ruta_imagen_simplicidad.png" alt="Simplicidad" className="transparent-image" />
-      </div>
-      <div className="valor-item text">
-        Simplicidad: Soluciones fáciles de usar para docentes y administradores.
-      </div>
+      <Col xs={12} md={6} lg={3} className="valores-item">
+        <Card className="text-center valores-card">
+          <Card.Body>
+            <Card.Title>Simplicidad</Card.Title>
+          </Card.Body>
+        </Card>
+      </Col>
 
-      <div className="valor-item image">
-        <img src="ruta_imagen_responsabilidad.png" alt="Responsabilidad" className="transparent-image" />
-      </div>
-      <div className="valor-item text">
-        Responsabilidad: Cumplir con plazos y altos estándares de seguridad.
-      </div>
+      <Col xs={12} md={6} lg={3} className="valores-item">
+        <Card className="text-center valores-card">
+          <Card.Body>
+            <Card.Title>Responsabilidad</Card.Title>
+          </Card.Body>
+        </Card>
+      </Col>
 
-      <div className="valor-item image">
-        <img src="ruta_imagen_sostenibilidad.png" alt="Sostenibilidad" className="transparent-image" />
-      </div>
-      <div className="valor-item text">
-        Sostenibilidad: Promover el uso eficiente de los recursos energéticos.
-      </div>
+      <Col xs={12} md={6} lg={3} className="valores-item">
+        <Card className="text-center valores-card">
+          <Card.Body>
+            <Card.Title>Sostenibilidad</Card.Title>
+          </Card.Body>
+        </Card>
+      </Col>
 
-      <div className="valor-item image">
-        <img src="ruta_imagen_adaptabilidad.png" alt="Adaptabilidad" className="transparent-image" />
-      </div>
-      <div className="valor-item text">
-        Adaptabilidad: Ajustar el desarrollo a las necesidades del entorno educativo.
-      </div>
+      <Col xs={12} md={6} lg={3} className="valores-item">
+        <Card className="text-center valores-card">
+          <Card.Body>
+            <Card.Title>Adaptabilidad</Card.Title>
+          </Card.Body>
+        </Card>
+      </Col>
 
-      <div className="valor-item image">
-        <img src="ruta_imagen_empatia.png" alt="Empatía" className="transparent-image" />
-      </div>
-      <div className="valor-item text">
-        Empatía: Entender las necesidades de los usuarios finales para mejorar su experiencia.
-      </div>
-    </div>
+      <Col xs={12} md={6} lg={3} className="valores-item">
+        <Card className="text-center valores-card">
+          <Card.Body>
+            <Card.Title>Empatía</Card.Title>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Row>
   );
 }
 
