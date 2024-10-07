@@ -40,7 +40,7 @@ export default function Navegador() {
               menuVariant="dark"
             >
               <NavDropdown.Item
-                as={Link} to="/Contenido"
+                as={Link} to="/Contacto"
                 className="hover:bg-gray-700 transition duration-200 font-bold text-white"
               >
                 Contacto

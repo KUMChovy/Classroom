@@ -62,3 +62,9 @@ body{
 #Acerca{
     margin: 0% 0% 0% 0%;
 }
+
+.texto-tarjeta {
+    font-size: 0.9rem;
+    text-align: center; /* Centrar el texto dentro del párrafo */
+  }
+  
