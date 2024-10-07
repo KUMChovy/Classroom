@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Dashboard.css';
 import { Modal, Button } from 'react-bootstrap'; 
 import Footer from '../Componentes/Footer';
+import NavIni from '../Componentes/NavIni';
 import {
     Chart,
     LineController,
@@ -173,6 +174,7 @@ function Dashboard() {
 
     return (
         <body>
+            <NavIni />
         <div className="dashboard-container">
             <div className="row dashboard-wrapper">
                 <div className="col-md-8">
