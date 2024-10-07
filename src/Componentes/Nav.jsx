@@ -47,7 +47,7 @@ export default function Navegador() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav.Link as={Link} to="/Iniciar_sesión" 
+          <Nav.Link as={Link} to="/Contenido" 
           className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">
             Iniciar sesión
           </Nav.Link>
