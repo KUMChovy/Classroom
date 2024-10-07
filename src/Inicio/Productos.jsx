@@ -47,6 +47,27 @@ function Busqueda() {
             categoria: 'Control de dispositivos',
             descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos incidunt tenetur, ut voluptas, autem expedita porro vitae vel facere perferendis ipsum maxime quaerat tempore voluptate illum dolorem cupiditate. Veritatis, repudiandae.',
             img: 'https://m.media-amazon.com/images/I/61lUJLwpCZL._AC_SX679_.jpg',
+        },
+        {
+            id: 6,
+            nombre: 'Toma de asistencia Automatizada',
+            categoria: 'Servicios',
+            descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos incidunt tenetur, ut voluptas, autem expedita porro vitae vel facere perferendis ipsum maxime quaerat tempore voluptate illum dolorem cupiditate. Veritatis, repudiandae.',
+            img: 'https://tse1.mm.bing.net/th?id=OIG3.tkp97aCOD0YeWh_DS7fH&pid=ImgGn',
+        },
+        {
+            id: 7,
+            nombre: 'Reportes de asistencia',
+            categoria: 'Servicios',
+            descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos incidunt tenetur, ut voluptas, autem expedita porro vitae vel facere perferendis ipsum maxime quaerat tempore voluptate illum dolorem cupiditate. Veritatis, repudiandae.',
+            img: 'https://tse2.mm.bing.net/th?id=OIG4.AYlWkQxuBAZ30n9nnPmH&pid=ImgGn',
+        },
+        {
+            id: 8,
+            nombre: 'Panel de control',
+            categoria: 'Servicios',
+            descripcion: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos incidunt tenetur, ut voluptas, autem expedita porro vitae vel facere perferendis ipsum maxime quaerat tempore voluptate illum dolorem cupiditate. Veritatis, repudiandae.',
+            img: 'https://tse1.mm.bing.net/th?id=OIG1.qNe0w7jm6jaZuYZlvZZT&pid=ImgGn',
         }
     ];
 
@@ -131,6 +152,14 @@ function Busqueda() {
                                 type="checkbox"
                                 label="Control de dispositivos"
                                 id="Control de dispositivos"
+                                onChange={handleCategoryChange}  
+                            />
+                        </Col>
+                        <Col xs="auto">
+                            <Form.Check
+                                type="checkbox"
+                                label="Servicios"
+                                id="Servicios"
                                 onChange={handleCategoryChange}  
                             />
                         </Col>

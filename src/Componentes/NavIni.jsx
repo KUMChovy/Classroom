@@ -6,43 +6,72 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import '../Componentes/Nav.css';
 import { useState } from 'react';
+import { Modal, Button } from 'react-bootstrap'; // Importar Modal y Button
 
 // Función para simular la recuperación de datos
 const getUsers = () => {
   return [
-    { id: 1, image: '' }, // Solo un usuario
+    {
+      id: 1,
+      nombre: 'Gabriel Orba Carvente',
+      email: 'Gabrielprofe@hotmail.com',
+      image: 'https://cdn3.iconfinder.com/data/icons/cat-pattern-colored/94/cat3-1024.png',
+    }, 
   ];
 };
 
 function UserDropdown() {
   const user = getUsers()[0]; // Solo un usuario
-  const [isOpen, setIsOpen] = useState(false); // Estado para controlar la apertura del dropdown
+  const [showModal, setShowModal] = useState(false); // Estado para controlar la apertura del modal
+
+  // Funciones para manejar la apertura y cierre del modal
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
 
   return (
-    <Dropdown onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)} show={isOpen}>
-      <Dropdown.Toggle 
-        variant="transparent" 
-        id="dropdown-basic" 
-        className="border-0" // Quitar borde del botón
+    <>
+      <Button
+        variant="transparent"
+        className="border-0 rounded-circle" // Hacer el botón circular
+        onClick={handleShowModal} // Abrir modal al hacer clic
       >
         <img
           src={user.image}
-          alt={user.name}
+          alt={user.nombre} // Corregir el atributo alt
           style={{
-            width: '30px',
-            height: '30px',
+            width: '40px',
+            height: '40px',
             borderRadius: '50%', // Hacer la imagen circular
-            marginRight: '10px',
           }}
         />
-        <span style={{ color: 'white' }}>Usuario 1</span> {/* Solo el texto en blanco */}
-      </Dropdown.Toggle>
+      </Button>
 
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/configuracion">Configuración</Dropdown.Item>
-        <Dropdown.Item href="#/cerrar-sesion">Cerrar sesión</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+      {/* Modal para mostrar la información del usuario */}
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Opciones de Usuario</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="text-center">
+          <img
+            src={user.image}
+            alt="User"
+            style={{
+              width: '90px',
+              height: '90px',
+              borderRadius: '60%', 
+              marginBottom: '10px',
+            }}
+          />
+          <p className="font-weight-bold">{user.nombre}</p> 
+          <p>{user.email}</p> 
+          <p className="font-weight-bold">¿Deseas cerrar sesión?</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" className='bg-danger' onClick={handleCloseModal}>Cancelar</Button>
+          <Button variant="danger" className='bg-success' href="#/cerrar-sesion">Cerrar sesión</Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 }
 
@@ -84,7 +113,7 @@ export default function Navegador() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <UserDropdown /> 
+          <UserDropdown />
         </Navbar.Collapse>
       </Container>
     </Navbar>
