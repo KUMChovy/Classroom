@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --login-bg: #000000;
+    --button-bg: #674baf;
+    --light-pink: #e882e8;
+    --image-bg: #eadbff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--login-bg);
+}
+
+.login-container {
+    position: relative;
+    width: 50em;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-info-container {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    padding: 2rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-image-container {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    display: block;
+}
+    
+.login-title {
+    font-size: 2.5rem;
+    color: blueviolet;
+    margin-bottom: 2rem;
+}
+
+.login-inputs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-input {
+    width: 90%;
+    margin: 1rem 0;
+    border: none;
+    border-bottom: 2px solid grey;
+    outline: none;
+    background: none;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.3s ease;
+    color: white;
+}
+
+.login-input:focus {
+    border-bottom: 2px solid var(--button-bg);
+}
+.login-btn {
+    width: 100%; /* Asegúrate de que el ancho sea similar a los campos de entrada */
+    padding: 1rem;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 1rem; /* Añadir margen superior para espaciarlo del texto */
+    align-self: center; /* Centrar el botón en el contenedor */
+}
+
+
+.login-btn:hover {
+    background-color: rgb(225, 0, 255);
+}
+
+.login-inputs-container p {
+    font-size: 0.9rem;
+    color: white;
+}
+
+.login-span {
+    color: blue;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+    .login-container {
+        flex-direction: column;
+        width: 80%;
+    }
+    
+    .login-info-container {
+        width: 90%;
+        height: auto;
+        position: relative;
+        padding: 1rem;
+    }
+    
+    .login-image-container {
+        width: 100%;
+        display: none;
+    }
+}

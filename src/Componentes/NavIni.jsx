@@ -3,40 +3,44 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import '../Componentes/Nav.css';
-import { Link } from 'react-router-dom';
-import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
+import '../Componentes/Nav.css';
+import { useState } from 'react';
 
 // Función para simular la recuperación de datos
 const getUsers = () => {
   return [
-    { id: 1, name: 'Usuario 1', image: 'url_imagen_1' },
-    { id: 2, name: 'Usuario 2', image: 'url_imagen_2' },
-    { id: 3, name: 'Usuario 3', image: 'url_imagen_3' },
+    { id: 1, image: '' }, // Solo un usuario
   ];
 };
 
 function UserDropdown() {
-  const users = getUsers(); // Recupera la lista de usuarios
+  const user = getUsers()[0]; // Solo un usuario
+  const [isOpen, setIsOpen] = useState(false); // Estado para controlar la apertura del dropdown
 
   return (
-    <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-        Seleccionar Usuario
+    <Dropdown onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)} show={isOpen}>
+      <Dropdown.Toggle 
+        variant="transparent" 
+        id="dropdown-basic" 
+        className="border-0" // Quitar borde del botón
+      >
+        <img
+          src={user.image}
+          alt={user.name}
+          style={{
+            width: '30px',
+            height: '30px',
+            borderRadius: '50%', // Hacer la imagen circular
+            marginRight: '10px',
+          }}
+        />
+        <span style={{ color: 'white' }}>Usuario 1</span> {/* Solo el texto en blanco */}
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        {users.map((user) => (
-          <Dropdown.Item key={user.id} href={`#/action-${user.id}`}>
-            <img
-              src={user.image}
-              alt={user.name}
-              style={{ width: '30px', height: '30px', marginRight: '10px' }}
-            />
-            {user.name}
-          </Dropdown.Item>
-        ))}
+        <Dropdown.Item href="#/configuracion">Configuración</Dropdown.Item>
+        <Dropdown.Item href="#/cerrar-sesion">Cerrar sesión</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );
@@ -80,7 +84,7 @@ export default function Navegador() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <UserDropdown /> {/* Componente Dropdown de usuarios */}
+          <UserDropdown /> 
         </Navbar.Collapse>
       </Container>
     </Navbar>
