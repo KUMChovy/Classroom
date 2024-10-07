@@ -21,3 +21,8 @@ instala todas las extenciones o componentes que no tengas
  git config pull.rebase false  # fusionar
 hint:   git config pull.rebase true   # rebasar
 hint:   git config pull.ff only       # solo avance rápido
+
+
+npm install react-icons
+
+npm install chart.js
