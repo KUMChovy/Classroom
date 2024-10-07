@@ -1,12 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavIni from '../Componentes/NavIni'
 
-function Contenido() {
+function Dashboard() {
   return (
 
-      <NavIni />
+    <NavIni />
     
+    
+
+
+
+
+
+
+
+
+
   );
 }
 
-export default Contenido;
+export default Dashboard;
