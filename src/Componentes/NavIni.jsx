@@ -5,9 +5,42 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../Componentes/Nav.css';
 import { Link } from 'react-router-dom';
+import React from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
 
+// Función para simular la recuperación de datos
+const getUsers = () => {
+  return [
+    { id: 1, name: 'Usuario 1', image: 'url_imagen_1' },
+    { id: 2, name: 'Usuario 2', image: 'url_imagen_2' },
+    { id: 3, name: 'Usuario 3', image: 'url_imagen_3' },
+  ];
+};
 
+function UserDropdown() {
+  const users = getUsers(); // Recupera la lista de usuarios
 
+  return (
+    <Dropdown>
+      <Dropdown.Toggle variant="success" id="dropdown-basic">
+        Seleccionar Usuario
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        {users.map((user) => (
+          <Dropdown.Item key={user.id} href={`#/action-${user.id}`}>
+            <img
+              src={user.image}
+              alt={user.name}
+              style={{ width: '30px', height: '30px', marginRight: '10px' }}
+            />
+            {user.name}
+          </Dropdown.Item>
+        ))}
+      </Dropdown.Menu>
+    </Dropdown>
+  );
+}
 
 export default function Navegador() {
   return (
@@ -40,16 +73,14 @@ export default function Navegador() {
               menuVariant="dark"
             >
               <NavDropdown.Item
-                as={Link} to="/Contenido"
+                href="#action/3.1"
                 className="hover:bg-gray-700 transition duration-200 font-bold text-white"
               >
                 Contacto
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav.Link href="#link" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">
-            Iniciar sesión
-          </Nav.Link>
+          <UserDropdown /> {/* Componente Dropdown de usuarios */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
