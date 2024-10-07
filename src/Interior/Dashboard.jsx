@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Dashboard.css';
 import { Modal, Button } from 'react-bootstrap'; 
+import Footer from '../Componentes/Footer';
 import {
     Chart,
     LineController,
@@ -171,6 +172,7 @@ function Dashboard() {
     const handleCloseReportModal = () => setShowReportModal(false);
 
     return (
+        <body>
         <div className="dashboard-container">
             <div className="row dashboard-wrapper">
                 <div className="col-md-8">
@@ -277,7 +279,10 @@ function Dashboard() {
                     <Button variant="primary" className='bg-success' onClick={handleCloseReportModal}>Generar Reporte</Button>
                 </Modal.Footer>
             </Modal>
+            
         </div>
+        <Footer />
+        </body>
     );
 }
 
