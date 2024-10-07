@@ -5,6 +5,7 @@ import Choby from '../img/Choby.jpeg';
 import Jose from '../img/Jose.jpeg';
 import Enrique from '../img/Enrique.jpeg';
 import Yan from '../img/Yan.jpeg';
+import Dess from '../img/Dess.jpg';
 import './Acerca.css';
 
 const registros = [
@@ -30,7 +31,7 @@ const registros = [
     id: 4,
     name: 'Martínez Ramírez Dessire Sheresada',
     title: 'Desarrollador',
-    img: 'https://via.placeholder.com/150',
+    img: Dess,
   },
   {
     id: 5,
