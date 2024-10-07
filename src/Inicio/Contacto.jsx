@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Container, Card, Form, Button, Row, Col } from 'react-bootstrap';
 import { FaFacebook, FaEnvelope } from 'react-icons/fa';
 import './Contacto.css';
+import Footer from '../Componentes/Footer';
+import Sola from "../Componentes/Sola"
 
 export default function Contacto() {
   const [name, setName] = useState('');
@@ -16,39 +18,41 @@ export default function Contacto() {
   };
 
   return (
-    <Container className="valores-nueva-container">
-      <Row className="valores-nueva-row justify-content-center">
+    <body>
+      <Sola />
+      <div className="contacto-valores-nueva-container">
+      <Row className="contacto-valores-nueva-row justify-content-center">
         <Col xs={12} sm={6} md={4} className="d-flex justify-content-center">
-          <Card className="tarjeta-personalizada card1">
+          <Card className="contacto-tarjeta-personalizada contacto-card1">
             <Card.Body>
-              <Card.Title className="titulo-tarjeta">Información de Contacto</Card.Title>
+              <Card.Title className="contacto-titulo-tarjeta">Información de Contacto</Card.Title>
               <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/256/5722/5722116.png" alt="Imagen de Contacto" />
-              <p className="texto-tarjeta">
-                <Button className="boton-facebook" href="tu_enlace_facebook" target="_blank" rel="noopener noreferrer">
+              <p className="contacto-texto-tarjeta">
+                <Button className="contacto-boton-facebook" href="https://www.facebook.com/profile.php?id=61560458833662&mibextid=LQQJ4d&rdid=fEpgGAt0kxHOrrK7&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fn8c8rE4fJ2y1C4NM%2F%3Fmibextid%3DLQQJ4d" target="_blank" rel="noopener noreferrer">
                   <FaFacebook size={20} /> Facebook
                 </Button>
               </p>
-              <p className="texto-tarjeta">
-                <Button className="boton-gmail" href="mailto:cody_go@gmail.com" target="_blank" rel="noopener noreferrer">
+              <p className="contacto-texto-tarjeta">
+                <Button className="contacto-boton-gmail" href="mailto:cody_go@gmail.com" target="_blank" rel="noopener noreferrer">
                   <FaEnvelope size={20} /> Gmail
                 </Button>
               </p>
-              <p className="texto-tarjeta">Teléfono: +52 55 3728 2899</p>
+              <p className="contacto-texto-tarjeta">Teléfono: +52 55 3728 2899</p>
             </Card.Body>
           </Card>
         </Col>
 
         <Col xs={12} sm={6} md={4} className="d-flex justify-content-center">
-          <Card className="tarjeta-personalizada card2">
+          <Card className="contacto-tarjeta-personalizada contacto-card2">
             <Card.Body>
-              <Card.Title className="titulo-tarjeta">Formulario</Card.Title>
+              <Card.Title className="contacto-titulo-tarjeta">Formulario</Card.Title>
               <Card.Img variant="top" src="https://cdn-icons-png.flaticon.com/256/15133/15133114.png" alt="Imagen de Formulario" />
               <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="formName">
                   <Form.Control 
                     type="text" 
                     placeholder="Nombre" 
-                    className="input-linea" 
+                    className="contacto-input-linea" 
                     value={name} 
                     onChange={(e) => setName(e.target.value)} 
                   />
@@ -57,7 +61,7 @@ export default function Contacto() {
                   <Form.Control 
                     type="email" 
                     placeholder="Correo Electrónico" 
-                    className="input-linea" 
+                    className="contacto-input-linea" 
                     value={email} 
                     onChange={(e) => setEmail(e.target.value)} 
                   />
@@ -66,7 +70,7 @@ export default function Contacto() {
                   <Form.Control 
                     type="tel" 
                     placeholder="Teléfono" 
-                    className="input-linea" 
+                    className="contacto-input-linea" 
                     value={phone} 
                     onChange={(e) => setPhone(e.target.value)} 
                   />
@@ -77,6 +81,8 @@ export default function Contacto() {
           </Card>
         </Col>
       </Row>
-    </Container>
+      </div>
+      <Footer />
+    </body>
   );
 }
