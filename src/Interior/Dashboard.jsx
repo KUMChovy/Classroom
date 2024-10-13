@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Dashboard.css';
 import { Modal, Button } from 'react-bootstrap'; 
+
 import {
     Chart,
     LineController,
@@ -169,6 +170,29 @@ function Dashboard() {
     const handleCloseAttendanceModal = () => setShowAttendanceModal(false);
     const handleShowReportModal = () => setShowReportModal(true);
     const handleCloseReportModal = () => setShowReportModal(false);
+
+    const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      setDarkMode(true);
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, []);
+
+     const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    const newTheme = !darkMode ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+    if (newTheme === "dark") {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  };
 
     return (
         <div className="dashboard-container">

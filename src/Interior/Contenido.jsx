@@ -1,3 +1,4 @@
+import React, { useState,  useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavIni from '../Componentes/NavIni'
 import Dashboard from './Dashboard';
@@ -7,13 +8,13 @@ function Contenido() {
   return (
         <div>
           <section>
-          <NavIni/>
-        </section>
+            <NavIni/>
+          </section>
+        
 
-
-        <section>
+        <div>
           <Dashboard/>
-        </section>
+        </div>
 
         <section>
           <Footer/>

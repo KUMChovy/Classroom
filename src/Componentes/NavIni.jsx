@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Navbar, Nav, NavDropdown, Container, Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../img/logo.webp";
-import "./Nav.css"; // Archivo de estilos donde definimos el modo oscuro y claro
+import "./Nav.css";
 
+// Función getUsers
 const getUsers = () => {
   return [
     {
@@ -74,7 +75,13 @@ function UserDropdown() {
 }
 
 // Componente principal del Navbar
-export default function Navegador({ toggleDarkMode, darkMode }) {
+export default function Navegador() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
       <Navbar expand="lg" className="nav bg-transparent shadow-md transition duration-300 ease-in-out">
@@ -108,7 +115,6 @@ export default function Navegador({ toggleDarkMode, darkMode }) {
             <button onClick={toggleDarkMode} className="dark-mode-toggle-btn">
               {darkMode ? "Modo Claro" : "Modo Oscuro"}
             </button>
-           
             <UserDropdown />
           </Navbar.Collapse>
         </Container>
