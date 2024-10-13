@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Navbar, Nav, NavDropdown, Container, Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../img/logo.webp";
-import "./Nav.css";
+import "./Nav.css"; // Asegúrate de tener el archivo CSS con las clases .dark-mode y .light-mode
 
-// Función getUsers
+// Función para obtener los datos del usuario
 const getUsers = () => {
   return [
     {
@@ -16,7 +16,7 @@ const getUsers = () => {
   ];
 };
 
-// Componente UserDropdown para mostrar la información del usuario en un modal
+// Componente UserDropdown para mostrar el modal de usuario
 function UserDropdown() {
   const user = getUsers()[0];
   const [showModal, setShowModal] = useState(false);
@@ -74,14 +74,8 @@ function UserDropdown() {
   );
 }
 
-// Componente principal del Navbar
-export default function Navegador() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
+// Componente principal NavIni
+export default function NavIni({ toggleDarkMode, darkMode }) {
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
       <Navbar expand="lg" className="nav bg-transparent shadow-md transition duration-300 ease-in-out">
@@ -112,9 +106,11 @@ export default function Navegador() {
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
+            {/* Botón de alternar entre Modo Oscuro/Claro */}
             <button onClick={toggleDarkMode} className="dark-mode-toggle-btn">
               {darkMode ? "Modo Claro" : "Modo Oscuro"}
             </button>
+            {/* Dropdown de usuario */}
             <UserDropdown />
           </Navbar.Collapse>
         </Container>

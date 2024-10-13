@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../img/logo.webp"
+import logo from "../img/logo.webp";
 import "./Nav.css"; // Archivo de estilos donde definimos el modo oscuro y claro
-
 
 export default function Navegador({ toggleDarkMode, darkMode }) {
   return (
@@ -30,12 +29,7 @@ export default function Navegador({ toggleDarkMode, darkMode }) {
               <Nav.Link href="#Acerca-de" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">
                 Acerca de
               </Nav.Link>
-              <NavDropdown
-                title={<span className="text">Más</span>}
-                id="basic-nav-dropdown"
-                className="font-bold"
-                menuVariant="dark"
-              >
+              <NavDropdown title={<span className="text">Más</span>} id="basic-nav-dropdown" className="font-bold" menuVariant="dark">
                 <NavDropdown.Item as={Link} to="/Contacto" className="hover:bg-gray-700 transition duration-200 font-bold text-white">
                   Contacto
                 </NavDropdown.Item>
