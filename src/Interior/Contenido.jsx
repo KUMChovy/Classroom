@@ -5,22 +5,20 @@ import Footer from '../Componentes/Footer';
 
 function Contenido() {
   return (
-      <body>
-        
-        <NavIni />
+        <div>
+          <section>
+          <NavIni/>
+        </section>
 
 
-        <section id='dashboard'>
+        <section>
           <Dashboard/>
         </section>
 
         <section>
-          <Footer />
+          <Footer/>
         </section>
-      </body>
-      
-
-      
+        </div>
   );
 }
 
