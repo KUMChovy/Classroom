@@ -4,7 +4,6 @@ import Navegador from "./Componentes/Nav";
 import Inicio from "./Inicio/Descripcion";
 import Login from "./login/Login"
 import Contacto from "./Inicio/Contacto";
-import Dashboard from "./Interior/Dashboard";
 import Contenido from "./Interior/Contenido";
 
 const AppRoutes = () => {
