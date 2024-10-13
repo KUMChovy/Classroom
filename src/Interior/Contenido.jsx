@@ -5,8 +5,7 @@ import Footer from '../Componentes/Footer';
 
 function Contenido() {
   return (
-      <body>
-        
+        <div className='Container'>
         <NavIni />
 
 
@@ -17,9 +16,8 @@ function Contenido() {
         <section>
           <Footer />
         </section>
-      </body>
       
-
+        </div>
       
   );
 }
