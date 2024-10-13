@@ -108,22 +108,3 @@
     outline: none;
 }
 
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    transition: background-color 0.5s, color 0.5s;
-}
-
-/* Estilos para el modo claro */
-.light-mode {
-    background-color: white; /* Fondo en modo claro */
-    color: black; /* Texto en modo claro */
-}
-
-/* Estilos para el modo oscuro */
-.dark-mode {
-    background-color: black; 
-    color: white; /* Texto en modo oscuro */
-}
