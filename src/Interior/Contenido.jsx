@@ -35,9 +35,9 @@ function Contenido() {
           </section>
         
 
-        <div>
+        <section>
           <Dashboard/>
-        </div>
+        </section>
 
         <section>
           <Footer/>

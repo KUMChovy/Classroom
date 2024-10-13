@@ -68,9 +68,14 @@
 .light-mode .text{
   color: black;
 }
+
 .light-mode .font-bold{
   color: black;
 }
+
+.dark-mode .text{
+    color: rgb(255, 255, 255);
+  }
 
 .dark-mode .nav {
     background-color: #343a40;
@@ -83,6 +88,8 @@
 .dark-mode .navbar-brand {
     color: white;
 }
+
+
 
 .dark-mode-toggle-btn {
     background-color: #E2E8F0;

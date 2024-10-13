@@ -199,8 +199,8 @@ function Dashboard() {
             <div className="row dashboard-wrapper">
                 <div className="col-md-8">
                     <div className="topbar text-center mb-4">
-                        <h4 className="fw-bold">Dashboard</h4>
-                        <p>Bienvenido al panel de gestión de aulas inteligentes.</p>
+                        <h4 className="fw-bold text">Dashboard</h4>
+                        <p className='text'>Bienvenido al panel de gestión de aulas inteligentes.</p>
                     </div>
 
                     <div className="main-content">
