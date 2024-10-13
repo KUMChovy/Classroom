@@ -1,16 +1,13 @@
-import React, { useState,  useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, OverlayTrigger, Popover } from 'react-bootstrap';
 import './Descripcion.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Testimonio from './Testimonios';
-import Nav from '../Componentes/Nav'
+import Nav from '../Componentes/Nav';
 import Busqueda from './Productos';
 import Hvm from '../Inicio/Hvm';
 import Valores from './Valores';
 import Footer from '../Componentes/Footer';
-
-
-
 
 const Inicio = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -29,15 +26,11 @@ const Inicio = () => {
     setDarkMode(!darkMode);
     const newTheme = !darkMode ? "dark" : "light";
     localStorage.setItem("theme", newTheme);
-    if (newTheme === "dark") {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
+    document.body.classList.toggle('dark-mode', newTheme === 'dark');
   };
 
   return (
-    <div>
+    <div className={darkMode ? "dark-mode" : "light-mode"}>
       <Nav toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
 
       <section id="Descripcion">
@@ -70,7 +63,7 @@ const Inicio = () => {
       </section>
 
       <section id="Comentarios">
-        <Testimonio />
+        <Testimonio darkMode={darkMode} /> {/* Pasamos darkMode al componente Testimonio */}
       </section>
 
       <section id="Busqueda">

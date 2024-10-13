@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Card, Form, Button, Row, Col } from 'react-bootstrap';
 import { FaFacebook, FaEnvelope } from 'react-icons/fa';
-import './Contacto.css';
+import './Descripcion.css'; 
 import Footer from '../Componentes/Footer';
 import Sola from "../Componentes/Sola"
 

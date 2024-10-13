@@ -1,5 +1,5 @@
 import React from "react";
-import "./productos.css";
+import './Descripcion.css'; 
 import panel from "../img/dasboard.webp";
 import esp32 from "../img/espe32.webp";
 import asistencia from "../img/asistencia.webp";

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal, Form, Carousel } from 'react-bootstrap';
+import './Descripcion.css'; 
 
 const MasComentarios = () => {
   const [comments, setComments] = useState([

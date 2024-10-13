@@ -1,7 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import './Testimonios'
-import Button from 'react-bootstrap/Button';
+import './Descripcion.css'; 
 
 const comments = [
   {
@@ -21,32 +20,28 @@ const comments = [
   },
 ];
 
-const Testimonio = () => {
+const Testimonio = ({ darkMode }) => {
   return (
-    <Carousel>
-      {comments.map((comment, index) => (
-        <Carousel.Item key={index}>
-          <div className="d-flex align-items-center p-3">
-            <img
-              src={comment.img}
-              alt={comment.name}
-              className="rounded-circle me-3"
-              style={{ width: '0px', height: '50px', margin: '0% 0% 0% 10%' }}
-            />
-            <div className='Contenido' style={{ color: '#b3b6b7 ' }}>
-              <h5>{comment.name}</h5>
-              <p>{comment.text}</p>
+    <div className={darkMode ? "dark-mode" : "light-mode"}>
+      <Carousel indicators={false}>
+        {comments.map((comment, index) => (
+          <Carousel.Item key={index}>
+            <div className="d-flex align-items-center p-3 comentarios">
+              <img
+                src={comment.img}
+                alt={comment.name}
+                className="rounded-circle me-3"
+                style={{ width: '50px', height: '50px', margin: '0 0 0 10%' }}
+              />
+              <div className='Contenido'>
+                <h5>{comment.name}</h5>
+                <p>{comment.text}</p>
+              </div>
             </div>
-
-            
-          </div>
-        </Carousel.Item>
-      ))}
-
-      
-    </Carousel>
-    
-    
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
   );
 };
 

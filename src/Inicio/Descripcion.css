@@ -1,69 +1,478 @@
-
-
-  
+/* Estilos de descripción */
 .text-justify {
-    text-align: justify; 
+    text-align: justify;
     margin: 2% 50% 0% 0%;
     font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
 }
+
 .no2 {
-    text-align: justify; 
+    text-align: justify;
     margin: 0% 50% 0% 0%;
     font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
 }
-.outline-light{
-    margin: 0% 50% 0% 0%;
 
+.outline-light {
+    margin: 0% 50% 0% 0%;
 }
-.text-primary{
-    text-align: justify; 
+
+.text-primary {
+    text-align: justify;
     margin: 0% 50% 0% 0%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
     color: aliceblue !important;
-    
 }
 
+/* Fondo y descripción */
 .fondo {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)), url('https://cdn.pixabay.com/photo/2016/12/15/20/28/classroom-1910012_640.jpg');
-    margin: 10px; 
-    padding: 0; 
-    height: 40vh; 
+    margin: 10px;
+    padding: 0;
+    height: 40vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
-  #descripcion {
+
+#descripcion {
     display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    height: 100%; 
-    color: white; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
     text-align: center;
-  }
-  
-  .text-justify {
-    text-align: center; 
-  }
-#Comentarios{
+}
+
+#Comentarios {
     margin: 5% 10% 5% 10%;
 }
 
-#popover-basic{
+#popover-basic {
     background-color: black;
 }
 
-.text{
+.text {
     color: rgb(0, 0, 0);
 }
-#Acerca{
+
+
+
+#Acerca {
     margin: 0% 0% 0% 0%;
 }
 
 .texto-tarjeta {
     font-size: 0.9rem;
-    text-align: center; /* Centrar el texto dentro del párrafo */
-  }
+    text-align: center;
+}
+
+/* Estilos del contacto */
+.contacto-valores-nueva-container {
+    position: relative;
+    height: auto;
+    margin: 0% 20% 5% 20%;
+}
+
+.contacto-valores-nueva-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.contacto-tarjeta-personalizada {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    min-height: 500px;
+    padding: 20px;
+}
+
+.contacto-card1 {
+    left: 15%;
+    background-color: hwb(276 46% 23%);
+    height: 520px;
+    width: 450px;
+}
+
+.contacto-card2 {
+    left: 0%;
+    margin-top: 100px;
+    background-color: #aed6f1;
+    height: 520px;
+    width: 320px;
+}
+
+.contacto-tarjeta-personalizada:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.contacto-input-linea {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: transparent;
+    color: black;
+    box-shadow: none;
+    appearance: none;
+}
+
+.contacto-input-linea:focus {
+    border-bottom: 2px solid #00ccff;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.contacto-input-linea:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+.contacto-titulo-tarjeta {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.contacto-texto-tarjeta {
+    font-size: 0.9rem;
+}
+
+.contacto-boton-facebook {
+    background-color: #3b5998;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.contacto-boton-facebook:hover {
+    background-color: #2d4373;
+}
+
+.contacto-boton-gmail {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.contacto-boton-gmail:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos del carrusel */
+.carousel-content {
+    position: relative;
+}
+
+.carousel-content img {
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: transform 0.7s;
+}
+
+.carousel-content img:hover {
+    transform: scale(1.05);
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/* Flechas del carrusel (prev y next) - Modo claro */
+.light-mode .carousel-control-prev-icon,
+.light-mode .carousel-control-next-icon {
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 fill%3D%22%23000000%22 viewBox%3D%220 0 16 16%22%3E%3Cpath fill-rule%3D%22evenodd%22 d%3D%22M11.354 1.354a.5.5 0 0 1 0 .708L6.707 6.707l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z%22/%3E%3C/svg%3E');
+  background-size: 100%, 100%;
+}
+
+/* Flechas del carrusel (prev y next) - Modo oscuro */
+.dark-mode .carousel-control-prev-icon,
+.dark-mode .carousel-control-next-icon {
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 fill%3D%22%23ffffff%22 viewBox%3D%220 0 16 16%22%3E%3Cpath fill-rule%3D%22evenodd%22 d%3D%22M11.354 1.354a.5.5 0 0 1 0 .708L6.707 6.707l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z%22/%3E%3C/svg%3E');
+  background-size: 100%, 100%;
+}
+
+.carousel-control-next-icon {
+    transform: rotate(180deg); 
+}
+
+/* Estilo de los indicadores (dots) en modo claro */
+.light-mode .carousel-indicators li {
+  background-color: black; /* Indicadores en negro en modo claro */
+}
+
+/* Estilo de los indicadores (dots) en modo oscuro */
+.dark-mode .carousel-indicators li {
+  background-color: white; /* Indicadores en blanco en modo oscuro */
+}
+
+/* Indicador activo */
+.carousel-indicators .active {
+  background-color: #007bff; /* Azul para el indicador activo */
+}
+
+/* Transición suave */
+.carousel-control-prev-icon, .carousel-control-next-icon,
+.carousel-indicators li {
+  transition: background-color 0.3s, background-image 0.3s;
+}
+
   
+  
+.title {
+    font-size: 4rem;
+    color: transparent;
+    background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2rem;
+    color: transparent;
+    background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.content {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.fade-in.delay {
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos de los productos */
+:root {
+    --cor-de-fundo: #2d3548;
+    --cor-clara: rgba(255, 255, 255, 0.6);
+    --cor-clara2: rgba(255, 255, 255, 0.9);
+    --medida-espaco-8: 8px;
+    --medida-espaco-16: 16px;
+    --medida-espaco-24: 24px;
+    --medida-espaco-32: 32px;
+    --medida-espaco-64: 64px;
+    --largura-caixa-geral: 1200px;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+.conteudo__geral {
+    align-items: flex-start;
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    padding: var(--medida-espaco-64) var(--medida-espaco-24);
+}
+
+.conteudo__cartoes-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--medida-espaco-24);
+    grid-row-gap: var(--medida-espaco-24);
+    max-width: var(--largura-caixa-geral);
+    width: 100%;
+}
+
+@media (min-width: 540px) {
+    .conteudo__cartoes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 960px) {
+    .conteudo__cartoes-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.elemento__cartao {
+    list-style: none;
+    position: relative;
+}
+
+.elemento__cartao:before {
+    content: "";
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+}
+
+.elemento__cartao--fundo {
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--medida-espaco-24);
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1);
+    transition: filter 200ms linear, transform 200ms linear;
+    z-index: 1;
+}
+
+.elemento__cartao:hover .elemento__cartao--fundo,
+.elemento__cartao:focus .elemento__cartao--fundo {
+    transform: scale(1.05);
+    filter: brightness(0.5) blur(5px);
+}
+
+.elemento__cartao--conteudo {
+    left: 0;
+    padding: var(--medida-espaco-24);
+    position: absolute;
+    top: 0;
+    color: var(--cor-clara2);
+    z-index: 2;
+    transition: opacity 200ms linear;
+}
+
+.elemento__cartao:hover .elemento__cartao--conteudo,
+.elemento__cartao:focus .elemento__cartao--conteudo {
+    opacity: 1;
+}
+
+.elemento__cartao--texto-categoria {
+    color: var(--cor-clara);
+    font-size: 0.9rem;
+    margin-bottom: var(--medida-espaco-8);
+    text-transform: uppercase;
+}
+
+.elemento__cartao--texto-titulo {
+    color: var(--cor-clara2);
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+    word-spacing: 100vw;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 4rem;
+    background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto -10px;
+    width: fit-content;
+}
+
+.elemento__cartao--descripcion {
+    display: none;
+    color: var(--cor-clara2);
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-top: var(--medida-espaco-8);
+}
+
+.elemento__cartao:hover .elemento__cartao--descripcion,
+.elemento__cartao:focus .elemento__cartao--descripcion {
+    display: block;
+}
+
+/* Estilos de testimonios */
+.Contenido {
+    margin: 0%;
+}
+
+.comentarios {
+    color: rgb(101, 101, 101);
+}
+
+/* Estilos de los valores */
+.valores-nueva-container {
+    margin-top: 10px;
+    position: relative;
+    height: auto;
+    margin: 0 auto 5%;
+}
+
+.valores-nueva-row {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tarjeta-personalizada {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-personalizada:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.tarjeta-personalizada img {
+    transition: transform 0.3s ease;
+    height: 200px;
+    object-fit: cover;
+}
+
+.titulo-tarjeta {
+    font-size: 1.2rem;
+}
+
+.titulo-valores {
+    text-align: center;
+    font-size: 4rem;
+    background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto 5%;
+    width: fit-content;
+}

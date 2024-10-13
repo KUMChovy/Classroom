@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel, Button } from 'react-bootstrap';
-import './Hvm.css'; // Asegúrate de crear este archivo CSS
+import './Descripcion.css'; 
 
 function Hvm() {
   return (

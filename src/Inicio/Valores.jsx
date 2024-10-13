@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Container, Carousel } from 'react-bootstrap';
-import './Valores.css';
+import './Descripcion.css'; 
 
 const valores = [
   {
@@ -41,7 +41,7 @@ const Valores = () => {
   return (
     <Container className="valores-nueva-container">
       <h2 className="titulo-valores">Valores de la Empresa</h2>
-      <Carousel>
+      <Carousel indicators={false}>
         <Carousel.Item>
           <div className="valores-nueva-row">
             {valores.slice(0, 3).map((valor) => (

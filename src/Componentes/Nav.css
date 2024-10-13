@@ -1,9 +1,27 @@
-*
-
 /* Estilos para el modo claro */
 .light-mode {
     background-color: white; /* Fondo en modo claro */
     color: black; /* Texto en modo claro */
+}
+
+.light-mode .nav {
+    background-color: white;
+}
+
+.light-mode .nav .nav-link {
+    color: black;
+}
+
+.light-mode .navbar-brand {
+    color: #3b82f6;
+}
+
+.light-mode .text {
+    color: black;
+}
+
+.light-mode .font-bold {
+    color: black;
 }
 
 /* Estilos para el modo oscuro */
@@ -12,7 +30,36 @@
     color: white; /* Texto en modo oscuro */
 }
 
-  body {
+.dark-mode .text {
+    color: rgb(255, 255, 255);
+}
+
+.dark-mode .comentarios {
+    color: rgb(107, 107, 107);
+}
+
+.dark-mode .carousel-control-prev-icon {
+    color: rgb(29, 29, 29); 
+  }
+  
+  .dark-mode .carousel-control-next-icon {
+    color: rgb(26, 26, 26); 
+  }
+
+.dark-mode .nav {
+    background-color: #343a40;
+}
+
+.dark-mode .nav .nav-link {
+    color: white;
+}
+
+.dark-mode .navbar-brand {
+    color: white;
+}
+
+/* Estilos generales */
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -54,43 +101,7 @@
     color: #1e40af;
 }
 
-.light-mode .nav {
-    background-color: white;
-}
-
-.light-mode .nav .nav-link {
-    color: black;
-}
-
-.light-mode .navbar-brand {
-    color: #3b82f6;
-}
-.light-mode .text{
-  color: black;
-}
-
-.light-mode .font-bold{
-  color: black;
-}
-
-.dark-mode .text{
-    color: rgb(255, 255, 255);
-  }
-
-.dark-mode .nav {
-    background-color: #343a40;
-}
-
-.dark-mode .nav .nav-link {
-    color: white;
-}
-
-.dark-mode .navbar-brand {
-    color: white;
-}
-
-
-
+/* Botón para cambiar entre modos */
 .dark-mode-toggle-btn {
     background-color: #E2E8F0;
     color: black;
@@ -109,4 +120,3 @@
 .dark-mode-toggle-btn:focus {
     outline: none;
 }
-
