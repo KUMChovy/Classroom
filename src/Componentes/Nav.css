@@ -120,3 +120,17 @@ body {
 .dark-mode-toggle-btn:focus {
     outline: none;
 }
+
+.cat {
+    background-color: transparent; 
+    border: none; 
+    outline: none; 
+    border-radius: 50%; 
+    padding: 5px; 
+}
+
+.cat:hover {
+    background-color: transparent !important; 
+    box-shadow: none !important; 
+    outline: none; 
+}

@@ -36,11 +36,11 @@ function Contenido() {
         
 
         <section>
-          <Dashboard/>
+          <Dashboard  darkMode={darkMode}/>
         </section>
 
         <section>
-          <Footer/>
+          <Footer darkMode={darkMode} />
         </section>
         </div>
   );

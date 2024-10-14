@@ -18,7 +18,7 @@ import {
 } from 'chart.js';
 
 
-function Dashboard() {
+function Dashboard({darkMode}) {
     // Estado para la hora actual
     const [currentTime, setCurrentTime] = useState('');
     // Estado para el modal de asistencia
@@ -171,31 +171,9 @@ function Dashboard() {
     const handleShowReportModal = () => setShowReportModal(true);
     const handleCloseReportModal = () => setShowReportModal(false);
 
-    const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      setDarkMode(true);
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, []);
-
-     const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    const newTheme = !darkMode ? "dark" : "light";
-    localStorage.setItem("theme", newTheme);
-    if (newTheme === "dark") {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  };
-
     return (
-        <div className="dashboard-container">
+        <div  className={darkMode ? "dark-mode" : "light-mode"}>
+            <div className="dashboard-container">
             <div className="row dashboard-wrapper">
                 <div className="col-md-8">
                     <div className="topbar text-center mb-4">
@@ -251,7 +229,7 @@ function Dashboard() {
                             <div className="col-md-6">
                                 <div className="card shadow-sm dashboard-card">
                                     <h5><i className="bi bi-check-circle me-2"></i>Reporte de asistencia</h5>
-                                    <Button className='' variant="primary" onClick={handleShowReportModal}>Generar Reporte de Asistencia</Button> 
+                                    <a className='btn' onClick={handleShowReportModal}>Generar Reporte de Asistencia</a> 
                                 </div>
                             </div>
                         </div>
@@ -302,6 +280,8 @@ function Dashboard() {
                 </Modal.Footer>
             </Modal>
         </div>
+        </div>
+        
     );
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = ({darkMode}) => {
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const [showFAQModal, setShowFAQModal] = useState(false);
 
@@ -12,7 +12,8 @@ const Footer = () => {
   const handleCloseFAQ = () => setShowFAQModal(false);
 
   return (
-    <footer className="footer">
+    <div  className={darkMode ? "dark-mode" : "light-mode"}>
+      <footer className="footer">
       <div className="container">
         <div className="footer-content">
           <div className="footer-left">
@@ -109,6 +110,8 @@ const Footer = () => {
         </Modal.Footer>
       </Modal>
     </footer>
+    </div>
+    
   );
 };
 

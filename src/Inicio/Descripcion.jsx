@@ -78,7 +78,7 @@ const Inicio = () => {
         <Valores  darkMode={darkMode} />
       </section>
 
-      <Footer />
+      <Footer darkMode={darkMode} />
     </div>
   );
 };

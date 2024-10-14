@@ -28,7 +28,7 @@ function UserDropdown() {
     <>
       <Button
         variant="transparent"
-        className="border-0 rounded-circle"
+        className="cat"
         onClick={handleShowModal}
       >
         <img
@@ -65,7 +65,7 @@ function UserDropdown() {
           <Button variant="secondary" className='bg-danger' onClick={handleCloseModal}>
             Cancelar
           </Button>
-          <Button variant="danger" className='bg-success' href="#/cerrar-sesion">
+          <Button as={Link} to="/" variant="danger" className='bg-success' href="#/cerrar-sesion">
             Cerrar sesión
           </Button>
         </Modal.Footer>
@@ -91,7 +91,7 @@ export default function NavIni({ toggleDarkMode, darkMode }) {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto mx-auto space-x-4">
-              <Nav.Link href="#Descripcion" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">
+              <Nav.Link as={Link} to="/Iniciar_sesión" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">
                 Inicio
               </Nav.Link>
               <Nav.Link href="#Busqueda" className="font-bold text-gray-700 hover:text-blue-600 transition duration-200">

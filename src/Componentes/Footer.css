@@ -5,6 +5,14 @@
     padding: 20px 0;
     text-align: center;
   }
+
+  .light-mode .footer {
+    background-color: #000000;
+    
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
   
   .footer-content {
     display: flex;
