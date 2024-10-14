@@ -5,7 +5,7 @@ import esp32 from "../img/espe32.webp";
 import asistencia from "../img/asistencia.webp";
 import reporte from "../img/reporte.webp";
 
-const Productos = () => {
+const Productos = ({darkMode}) => {
   const productos = [
     {
       id: 1,
@@ -38,8 +38,8 @@ const Productos = () => {
   ];
 
   return (
-    <div>
-      <h2 className="titulo">Servicios</h2>
+    <div className={darkMode ? "dark-mode" : "light-mode"}>
+      <h2 className="titulo title">Servicios</h2>
       <section className="conteudo__geral">
         <div className="conteudo__cartoes-grid">
           {productos.map((producto) => (

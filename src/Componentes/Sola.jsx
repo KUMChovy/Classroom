@@ -9,9 +9,10 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function Sola() {
+export default function Sola({ toggleDarkMode, darkMode }) {
   return (
-    <Navbar expand="lg" className="nav bg-transparent shadow-md transition duration-300 ease-in-out">
+    <div className={darkMode ? 'dark-mode' : 'light-mode'}>
+      <Navbar expand="lg" className="nav bg-transparent shadow-md transition duration-300 ease-in-out">
       <Container>
         <Navbar.Brand as={Link} to="/Inicio" className="flex items-center">
           <img src={logo} alt="Logo" className="logo" />
@@ -19,8 +20,12 @@ export default function Sola() {
             CRS
           </span>
         </Navbar.Brand>
-        
+        <button onClick={toggleDarkMode} className="dark-mode-toggle-btn">
+              {darkMode ? "Modo Claro" : "Modo Oscuro"}
+            </button>
       </Container>
     </Navbar>
+    </div>
+    
   );
 }

@@ -63,19 +63,19 @@ const Inicio = () => {
       </section>
 
       <section id="Comentarios">
-        <Testimonio darkMode={darkMode} /> {/* Pasamos darkMode al componente Testimonio */}
+        <Testimonio darkMode={darkMode}/> {/* Pasamos darkMode al componente Testimonio */}
       </section>
 
       <section id="Busqueda">
-        <Busqueda />
+        <Busqueda  darkMode={darkMode}/>
       </section>
 
       <section id="Acerca-de">
-        <Hvm />
+        <Hvm  darkMode={darkMode}/>
       </section>
 
       <section id="Acerc">
-        <Valores />
+        <Valores  darkMode={darkMode} />
       </section>
 
       <Footer />

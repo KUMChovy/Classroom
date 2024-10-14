@@ -236,24 +236,26 @@
   transition: background-color 0.3s, background-image 0.3s;
 }
 
-  
-  
-.title {
-    font-size: 4rem;
+
+/* Estilos para el modo oscuro */
+.dark-mode .title {
     color: transparent;
-    background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(0, 204, 255, 1) 0%, rgba(255, 0, 150, 1) 100%); /* Invertimos el gradiente */
     -webkit-background-clip: text;
     background-clip: text;
-    margin-bottom: 20px;
 }
 
-h3 {
-    font-size: 2rem;
+.light-mode .title {
     color: transparent;
-    background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(150, 0, 0, 1) 50%, rgba(255, 0, 0, 1) 100%);
     -webkit-background-clip: text;
     background-clip: text;
 }
+
+
+
+
+
 
 .content {
     font-size: 1.2rem;

@@ -35,50 +35,54 @@ const valores = [
   },
 ];
 
-const Valores = () => {
+const Valores = ({darkMode}) => {
   const [focusedCard, setFocusedCard] = useState(null);
 
   return (
+
     <Container className="valores-nueva-container">
-      <h2 className="titulo-valores">Valores de la Empresa</h2>
-      <Carousel indicators={false}>
-        <Carousel.Item>
-          <div className="valores-nueva-row">
-            {valores.slice(0, 3).map((valor) => (
-              <Card
-                key={valor.id}
-                className={`tarjeta-personalizada ${focusedCard === valor.id ? 'focused' : ''}`}
-                onMouseEnter={() => setFocusedCard(valor.id)}
-                onMouseLeave={() => setFocusedCard(null)}
-                style={{ width: '18rem', margin: '0 15px' }} // Agregado margen horizontal
-              >
-                <Card.Img variant="top" src={valor.img} />
-                <Card.Body>
-                  <Card.Title className="titulo-tarjeta">{valor.title}</Card.Title>
-                </Card.Body>
-              </Card>
-            ))}
-          </div>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="valores-nueva-row">
-            {valores.slice(3).map((valor) => (
-              <Card
-                key={valor.id}
-                className={`tarjeta-personalizada ${focusedCard === valor.id ? 'focused' : ''}`}
-                onMouseEnter={() => setFocusedCard(valor.id)}
-                onMouseLeave={() => setFocusedCard(null)}
-                style={{ width: '18rem', margin: '0 15px' }} // Agregado margen horizontal
-              >
-                <Card.Img variant="top" src={valor.img} />
-                <Card.Body>
-                  <Card.Title className="titulo-tarjeta">{valor.title}</Card.Title>
-                </Card.Body>
-              </Card>
-            ))}
-          </div>
-        </Carousel.Item>
-      </Carousel>
+      <div className={darkMode ? "dark-mode" : "light-mode"}>
+        <h2 className="titulo-valores title">Valores de la Empresa</h2>
+        <Carousel indicators={false}>
+          <Carousel.Item>
+            <div className="valores-nueva-row">
+              {valores.slice(0, 3).map((valor) => (
+                <Card
+                  key={valor.id}
+                  className={`tarjeta-personalizada ${focusedCard === valor.id ? 'focused' : ''}`}
+                  onMouseEnter={() => setFocusedCard(valor.id)}
+                  onMouseLeave={() => setFocusedCard(null)}
+                  style={{ width: '18rem', margin: '0 15px' }} // Agregado margen horizontal
+                >
+                  <Card.Img variant="top" src={valor.img} />
+                  <Card.Body>
+                    <Card.Title className="titulo-tarjeta">{valor.title}</Card.Title>
+                  </Card.Body>
+                </Card>
+              ))}
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="valores-nueva-row">
+              {valores.slice(3).map((valor) => (
+                <Card
+                  key={valor.id}
+                  className={`tarjeta-personalizada ${focusedCard === valor.id ? 'focused' : ''}`}
+                  onMouseEnter={() => setFocusedCard(valor.id)}
+                  onMouseLeave={() => setFocusedCard(null)}
+                  style={{ width: '18rem', margin: '0 15px' }} // Agregado margen horizontal
+                >
+                  <Card.Img variant="top" src={valor.img} />
+                  <Card.Body>
+                    <Card.Title className="titulo-tarjeta">{valor.title}</Card.Title>
+                  </Card.Body>
+                </Card>
+              ))}
+            </div>
+          </Carousel.Item>
+        </Carousel>
+      </div>
+      
     </Container>
   );
 };

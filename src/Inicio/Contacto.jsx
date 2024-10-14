@@ -1,14 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Card, Form, Button, Row, Col } from 'react-bootstrap';
 import { FaFacebook, FaEnvelope } from 'react-icons/fa';
 import './Descripcion.css'; 
 import Footer from '../Componentes/Footer';
 import Sola from "../Componentes/Sola"
+import Nav from '../Componentes/Nav';
 
 export default function Contacto() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      setDarkMode(true);
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    const newTheme = !darkMode ? "dark" : "light";
+    localStorage.setItem("theme", newTheme);
+    document.body.classList.toggle('dark-mode', newTheme === 'dark');
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,10 +36,11 @@ export default function Contacto() {
     console.log('Correo:', email);
     console.log('Teléfono:', phone);
   };
+  
 
   return (
-    <body>
-      <Sola />
+    <div className={darkMode ? "dark-mode" : "light-mode"}>
+      <Sola toggleDarkMode={toggleDarkMode} darkMode={darkMode}  />
       <div className="contacto-valores-nueva-container">
       <Row className="contacto-valores-nueva-row justify-content-center">
         <Col xs={12} sm={6} md={4} className="d-flex justify-content-center">
@@ -83,6 +104,6 @@ export default function Contacto() {
       </Row>
       </div>
       <Footer />
-    </body>
+    </div>
   );
 }

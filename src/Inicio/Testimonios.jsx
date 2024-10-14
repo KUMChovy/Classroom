@@ -20,9 +20,9 @@ const comments = [
   },
 ];
 
-const Testimonio = ({ darkMode }) => {
+const Testimonio = ({ darkMode }) => { 
   return (
-    <div className={darkMode ? "dark-mode" : "light-mode"}>
+    <div className={darkMode ? "dark-mode " : "light-mode"}>
       <Carousel indicators={false}>
         {comments.map((comment, index) => (
           <Carousel.Item key={index}>

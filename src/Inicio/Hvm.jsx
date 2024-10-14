@@ -2,9 +2,9 @@ import React from 'react';
 import { Carousel, Button } from 'react-bootstrap';
 import './Descripcion.css'; 
 
-function Hvm() {
+function Hvm({darkMode}) {
   return (
-    <div style={{ margin: '20px' }}>
+    <div style={{ margin: '20px' }} className={darkMode ? "dark-mode" : "light-mode"}>
       <h2 className="text-center mb-4 title">Cody Go: Historia, Visión y Misión</h2>
       <Carousel interval={4000} fade>
         <Carousel.Item>
