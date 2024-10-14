@@ -39,7 +39,7 @@ function Login() {
                 },
                 pubKeyCredParams: [{ type: "public-key", alg: -7 }], // Algoritmo ES256
                 timeout: 60000,
-                attestation: "direct",
+                attestation: "direct", 
             };
 
             const credential = await navigator.credentials.create({ publicKey });
