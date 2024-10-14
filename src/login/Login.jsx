@@ -4,11 +4,13 @@ import { Link, useNavigate } from 'react-router-dom'; // useNavigate para rediri
 import { Nav } from 'react-bootstrap'; // Asegúrate de importar Nav desde react-bootstrap
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'; // Firebase auth
 import { db } from '../firebaseConfig'; // Importa tu configuración de Firebase
+import PhoneLogin from './Verificacion';
 
 function Login() {
   const [email, setEmail] = useState(''); // Estado para el email
   const [password, setPassword] = useState(''); // Estado para la contraseña
   const [error, setError] = useState(null); // Estado para los errores
+  const [showPhoneLogin, setShowPhoneLogin] = useState(false); // Estado para mostrar PhoneLogin
   const navigate = useNavigate(); // Para redirigir tras el login
 
   // Maneja el login con Firebase
@@ -24,6 +26,7 @@ function Login() {
     } catch (error) {
       // Mostrar el error si algo falla
       setError('Error al iniciar sesión. Verifica tus credenciales.');
+      setShowPhoneLogin(true); // Mostrar PhoneLogin si hay un error
     }
   };
 
@@ -62,6 +65,7 @@ function Login() {
           alt="Imagen tecnológica"
         />
       </div>
+      {showPhoneLogin && <PhoneLogin />} {/* Mostrar PhoneLogin solo si hay un error */}
     </div>
   );
 }
