@@ -47,8 +47,8 @@ const Inicio = () => {
               placement="right"
               overlay={
                 <Popover id="popover-basic">
-                  <Popover.Header as="h3">Más Info</Popover.Header>
-                  <Popover.Body className="text">
+                  <Popover.Header as="h3" className='tituloPopover'>Más Info</Popover.Header>
+                  <Popover.Body className="textPopover">
                     Optimiza el pase de lista y utiliza sensores para adaptar las condiciones del aula, mejorando la eficiencia y comodidad.
                   </Popover.Body>
                 </Popover>
